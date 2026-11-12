@@ -1,0 +1,68 @@
+
+[
+  {
+    "month": "April",
+    "bill_date": "09-Apr-2026",
+    "due_date": "23-Apr-2026",
+    "billed_units": 102,
+    "present_reading_kwh": 10940,
+    "previous_reading_kwh": 10838,
+    "energy_charges": 561.18,
+    "fixed_charges": 10.00,
+    "customer_charges": 45.00,
+    "net_bill_amount": 436.94,
+    "source_file": "APRIL.pdf"
+  },
+  {
+    "month": "May",
+    "bill_date": "09-May-2026",
+    "due_date": "23-May-2026",
+    "billed_units": 120,
+    "present_reading_kwh": 11060,
+    "previous_reading_kwh": 10940,
+    "energy_charges": 577.35,
+    "fixed_charges": 10.00,
+    "customer_charges": 45.00,
+    "net_bill_amount": 528.76,
+    "source_file": "MAY.pdf"
+  },
+  {
+    "month": "June",
+    "bill_date": "09-Jun-2026",
+    "due_date": "23-Jun-2026",
+    "billed_units": 128,
+    "present_reading_kwh": 11188,
+    "previous_reading_kwh": 11060,
+    "energy_charges": 619.50,
+    "fixed_charges": 10.00,
+    "customer_charges": 50.00,
+    "net_bill_amount": 524.91,
+    "source_file": "JUNE.pdf"
+  },
+  {
+    "month": "July",
+    "bill_date": "10-Jul-2026",
+    "due_date": "24-Jul-2026",
+    "billed_units": 90,
+    "present_reading_kwh": 11278,
+    "previous_reading_kwh": 11188,
+    "energy_charges": 432.45,
+    "fixed_charges": 10.00,
+    "customer_charges": 45.00,
+    "net_bill_amount": 410.41,
+    "source_file": "JULY.pdf"
+  },
+  {
+    "month": "August",
+    "bill_date": "11-Aug-2026",
+    "due_date": "25-Aug-2026",
+    "billed_units": 145,
+    "present_reading_kwh": 11423,
+    "previous_reading_kwh": 11278,
+    "energy_charges": 721.50,
+    "fixed_charges": 10.00,
+    "customer_charges": 50.00,
+    "net_bill_amount": 676.41,
+    "source_file": "AUG.pdf"
+  }
+]

@@ -1,0 +1,32 @@
+# PDF processing
+pymupdf
+pdfplumber
+
+# Image processing and OCR
+Pillow
+pytesseract
+
+# Data processing
+pandas
+numpy
+
+# Document chunking
+langchain-text-splitters
+
+# Embeddings
+sentence-transformers
+
+# Vector database
+faiss-cpu
+
+# Gemini API
+google-genai
+
+# User interface
+streamlit
+
+# Environment configuration
+python-dotenv
+
+# Testing
+pytest

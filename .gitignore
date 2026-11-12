@@ -1,0 +1,80 @@
+# ============================================================
+# Python & Environment
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+.venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment Secrets & Keys
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# ============================================================
+# Privacy & Security: Electricity Bills & Personal Documents
+# ============================================================
+# Ignore all PDF files (raw bills contain names, addresses, consumer IDs)
+*.pdf
+SEP.pdf
+
+# Historical & Uploaded Bills
+data/historical/*
+!data/historical/.gitkeep
+data/uploads/*
+!data/uploads/.gitkeep
+
+# Processed data containing OCR transcripts & PII
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/historical_bills.json
+
+# Generated Vector Database & Embeddings
+vector_db/*
+!vector_db/.gitkeep
+
+# Backup & Transaction Rollback Files
+*.bak
+*.rollback
+*.tmp
+*.tmp.*
+.*.tmp*
+
+# ============================================================
+# Logs, Cache & OS Artifacts
+# ============================================================
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

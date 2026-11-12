@@ -1,0 +1,8 @@
+.venv\Scripts\activate
+
+
+python -m pip install pymupdf pillow pytesseract
+
+
+
+python -c "import pymupdf, pytesseract, PIL; print('Python libraries: OK'); print('Tesseract version:', pytesseract.get_tesseract_version())"
