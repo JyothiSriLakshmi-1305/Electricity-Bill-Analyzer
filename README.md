@@ -1,11 +1,14 @@
 # ⚡ AI Electricity Bill Analyzer & Energy Assistant
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Render-46E3B7.svg)](https://electricity-bill-analyzer-ktmi.onrender.com)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.40%2B-FF4B4B.svg)](https://streamlit.io/)
 [![Google Gemini](https://img.shields.io/badge/LLM-Google%20Gemini%202.5%20Flash-4285F4.svg)](https://ai.google.dev/)
 [![FAISS](https://img.shields.io/badge/Vector%20DB-FAISS%20CPU-008080.svg)](https://github.com/facebookresearch/faiss)
 [![Sentence Transformers](https://img.shields.io/badge/Embeddings-all--MiniLM--L6--v2-orange.svg)](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()
+
+> 🌐 **Live Application**: [https://electricity-bill-analyzer-ktmi.onrender.com](https://electricity-bill-analyzer-ktmi.onrender.com)
 
 An end-to-end, enterprise-grade **Retrieval-Augmented Generation (RAG)** application and analytics dashboard designed to ingest, validate, analyze, and query **Andhra Pradesh electricity bills (APEPDCL)**.
 
@@ -27,8 +30,7 @@ The system combines **dual-engine document ingestion (PyMuPDF + Tesseract OCR)**
   - [6. Streamlit Interactive Dashboard](#6-streamlit-interactive-dashboard)
 - [Installation & Setup Guide](#-installation--setup-guide)
 - [Running the Application](#-running-the-application)
-- [Sample Queries for Presentation Demo](#-sample-queries-for-presentation-demo)
-- [Project Presentation Cheatsheet](#-project-presentation-cheatsheet-for-tomorrow)
+- [Sample Queries & Test Cases](#-sample-queries--test-cases)
 - [Privacy & Security Guarantee](#-privacy--security-guarantee)
 
 ---
@@ -274,9 +276,9 @@ You can also run any of the pipeline modules independently:
 
 ---
 
-## 🎯 Sample Queries for Presentation Demo
+## 🎯 Sample Queries & Test Cases
 
-Try asking these questions during your presentation to demonstrate the AI's versatility:
+Try asking these questions to explore the system's hybrid retrieval and calculation capabilities:
 
 | Query Type | Sample Question | Expected Behavior |
 | :--- | :--- | :--- |
@@ -286,27 +288,7 @@ Try asking these questions during your presentation to demonstrate the AI's vers
 | **Aggregations** | *"What is the average consumption across all months?"* | Calculates exact mathematical mean without LLM hallucination. |
 | **Date Queries** | *"When is the payment due date for the July bill?"* | Direct extraction of `24-Jul-2026`. |
 | **Comparative Trend** | *"Compare electricity usage between June and August."* | Generates a structured markdown comparison table. |
-| **Dynamic Ingestion** | Upload `SEP.pdf` via sidebar | Processes, validates meter readings, updates FAISS, and answers questions on September! |
-
----
-
-## 🎤 Project Presentation Cheatsheet (For Tomorrow!)
-
-Keep these key talking points handy for your presentation slides and viva questions:
-
-### 1. Elevator Pitch (30 Seconds)
-> *"We built an AI-powered Electricity Bill Analyzer and Assistant that solves a major challenge in utility management: standard language models frequently hallucinate when dealing with numbers and dates in complex bills. Our solution combines a dual-mode OCR pipeline, physics-based data validation, FAISS vector search, and a hybrid RAG architecture that performs exact arithmetic in Python while using Google Gemini for grounded natural-language explanations."*
-
-### 2. Frequently Asked Evaluator Questions & Answers
-
-- **Q: Why not just upload the PDF directly to ChatGPT or Claude?**
-  - **A**: General-purpose LLMs struggle with multi-month tabular arithmetic, hallucinate subtractions and date formats, cannot automatically enforce physical meter constraints ($\text{Present} - \text{Previous} = \text{Units}$), and expose sensitive consumer PII to cloud prompts. Our system enforces local validation, exact math in code, and privacy protection.
-- **Q: How does the system handle poor-quality or scanned bills?**
-  - **A**: We implement a fallback system. If PyMuPDF detects digital text, extraction takes under 50ms. If it's a scanned bill, the page is rendered at 300 DPI, contrast-enhanced by 1.5x, and passed to Tesseract with Page Segmentation Mode 6 (PSM 6), tracking OCR confidence per word.
-- **Q: What happens when a user uploads a new bill?**
-  - **A**: The `upload_orchestrator` executes a transactional workflow. It validates file size, checks SHA-256 for duplicate bills, extracts fields, verifies meter physics, and updates the FAISS index incrementally in memory. If any error occurs, it executes a complete rollback without corrupting the historical database.
-- **Q: What embedding model and distance metric are used?**
-  - **A**: We use `all-MiniLM-L6-v2` (384 dimensions) with L2-normalized embeddings stored in a `FAISS IndexFlatIP` (Inner Product). Because vectors are normalized, Inner Product mathematically equals Cosine Similarity, yielding fast and accurate semantic retrieval.
+| **Dynamic Ingestion** | Upload a new bill (e.g. `OCT.pdf`) via sidebar | Processes, validates meter readings, updates FAISS, and answers questions on the new month! |
 
 ---
 
