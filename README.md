@@ -1,5 +1,9 @@
 # ⚡ AI Electricity Bill Analyzer & Energy Assistant
 
+## Project Done BY:
+## 23A81A6134 (KUNA JYOTHI SRI LAKSHMI)
+## 23A81A6150 (P CHANDINI)
+
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Render-46E3B7.svg)](https://electricity-bill-analyzer-ktmi.onrender.com)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.40%2B-FF4B4B.svg)](https://streamlit.io/)
